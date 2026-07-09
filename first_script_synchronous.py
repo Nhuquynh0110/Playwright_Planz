@@ -1,6 +1,6 @@
-from playwright.sync_api import sync_playwright
+import playwright.sync_api
 
-with sync_playwright() as playwright:
+with playwright.sync_api.sync_playwright() as playwright:
     # lauch a browser
     browser = playwright.chromium.launch(headless=False, slow_mo = 3000) #1s = 1000 milliseconds, headless=True : chạy ẩn
     # create a new tab
